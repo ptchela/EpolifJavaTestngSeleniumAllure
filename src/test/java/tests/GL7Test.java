@@ -1,13 +1,9 @@
 package tests;
 
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.ACP1_Page;
-import pages.GL7_Page;
-import pages.MainPage;
 
-public class GL7_Test extends BaseTest {
+public class GL7Test extends BaseTest {
 
     @Test
     public void testClickOnLogoGL7() {

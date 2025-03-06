@@ -1,12 +1,9 @@
 package tests;
 
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.ACP1_Page;
-import pages.MainPage;
 
-public class ACP1_Test extends BaseTest {
+public class ACP1Test extends BaseTest {
 
     @Test
     public void testClickOnLogoACP1() {
