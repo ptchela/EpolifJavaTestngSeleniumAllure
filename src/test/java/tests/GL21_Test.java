@@ -6,66 +6,64 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.ACP1_Page;
 import pages.GL21_Page;
+import pages.GL7_Page;
 import pages.MainPage;
 
 public class GL21_Test extends BaseTest {
 
+    private MainPage mainPage;
+    private GL21_Page gl21Page;
+
+    @BeforeMethod
+    public void setUpTest() {
+        mainPage = new MainPage(driver, link);
+        gl21Page = new GL21_Page(driver, link);
+    }
+
 
     @Test
     public void testClickOnLogoGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.clickOnLogo();
     }
 
     @Test
     public void testGoToMainPageFromGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.goToMainPage();
     }
 
     @Test
     public void testGoToAquaPageFromGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.goToAquaPage();
     }
 
     @Test
     public void testGoToGL7FromGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.goToGl7Page();
     }
 
     @Test
     public void testGoToGL21FromGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.goToGl21Page();
     }
 
     @Test
     public void testGoToACP1FromGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.goToAcp1Page();
     }
 
     @Test
     public void testFooterInformationGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.chainsDown();
         gl21Page.footerInformation();
         gl21Page.footerInformationCheck();
@@ -73,9 +71,7 @@ public class GL21_Test extends BaseTest {
 
     @Test
     public void testUpButtonGL21() {
-        MainPage mainPage = new MainPage(driver, link);
         mainPage.goToGl21Page();
-        GL21_Page gl21Page = new GL21_Page(driver, link);
         gl21Page.chainsDown();
         gl21Page.upButton();
         gl21Page.shouldBeHover();
