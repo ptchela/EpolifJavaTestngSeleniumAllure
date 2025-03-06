@@ -45,6 +45,30 @@ public class MainPageTests {
     }
 
     @Test
+    public void testGoToAquaPage() {
+        MainPage page = new MainPage(driver, link);
+        page.goToAquaPage();
+    }
+
+    @Test
+    public void testGoToGl7Page() {
+        MainPage page = new MainPage(driver, link);
+        page.goToGl7Page();
+    }
+
+    @Test
+    public void testGoToGl21Page() {
+        MainPage page = new MainPage(driver, link);
+        page.goToGl21Page();
+    }
+
+    @Test
+    public void testGoToAcp1Page() {
+        MainPage page = new MainPage(driver, link);
+        page.goToAcp1Page();
+    }
+
+    @Test
     public void testFooterInformation() {
         MainPage page = new MainPage(driver, link);
         page.chainsDown();
@@ -54,6 +78,15 @@ public class MainPageTests {
 
     @Test
     public void testButton() {
+        MainPage page = new MainPage(driver, link);
+        page.chainsDown();
+        page.upButton();
+        page.shouldBeHover();
+        page.clickUpButtonMain();
+    }
+
+    @Test
+    public void testVideo() {
         MainPage page = new MainPage(driver, link);
         page.presenceOfTheVideo();
         page.videoOnRepeat();
