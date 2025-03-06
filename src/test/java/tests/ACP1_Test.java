@@ -8,16 +8,6 @@ import pages.MainPage;
 
 public class ACP1_Test extends BaseTest {
 
-    private MainPage mainPage;
-    private ACP1_Page acp1Page;
-
-    @BeforeMethod
-    public void setUpTest() {
-        mainPage = new MainPage(driver, link);
-        acp1Page = new ACP1_Page(driver, link);
-    }
-
-
     @Test
     public void testClickOnLogoACP1() {
         mainPage.goToAcp1Page();

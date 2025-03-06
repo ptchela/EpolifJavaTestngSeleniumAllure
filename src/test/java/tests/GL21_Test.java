@@ -15,16 +15,6 @@ import pages.MainPage;
 
 public class GL21_Test extends BaseTest {
 
-    private MainPage mainPage;
-    private GL21_Page gl21Page;
-
-    @BeforeMethod
-    public void setUpTest() {
-        mainPage = new MainPage(driver, link);
-        gl21Page = new GL21_Page(driver, link);
-    }
-
-
     @Test
     public void testClickOnLogoGL21() {
         mainPage.goToGl21Page();

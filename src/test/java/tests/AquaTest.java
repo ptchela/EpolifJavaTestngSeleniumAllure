@@ -8,16 +8,6 @@ import pages.MainPage;
 
 public class AquaTest extends BaseTest {
 
-    private MainPage mainPage;
-    private AquaPage aquaPage;
-
-    @BeforeMethod
-    public void setUpTest() {
-        mainPage = new MainPage(driver, link);
-        aquaPage = new AquaPage(driver, link);
-    }
-
-
     @Test
     public void testClickOnLogoAqua() {
         mainPage.goToAquaPage();

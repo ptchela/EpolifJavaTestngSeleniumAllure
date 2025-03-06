@@ -14,62 +14,55 @@ import pages.MainPage;
 
 public class MainPageTests extends BaseTest {
 
-    private MainPage page;
-
-    @BeforeMethod
-    public void setUpTest() {
-        page = new MainPage(driver, link);
-    }
-
     @Test
     public void testClickOnLogoMain() {
-        page.clickOnLogo();
+        mainPage.clickOnLogo();
     }
 
     @Test
     public void testGoToMainPage() {
-        page.goToMainPage();
+        mainPage.goToMainPage();
     }
 
     @Test
     public void testGoToAquaPage() {
-        page.goToAquaPage();
+        mainPage.goToAquaPage();
     }
 
     @Test
     public void testGoToGl7Page() {
-        page.goToGl7Page();
+        mainPage.goToGl7Page();
     }
 
     @Test
     public void testGoToGl21Page() {
-        page.goToGl21Page();
+        mainPage.goToGl21Page();
     }
 
     @Test
     public void testGoToAcp1Page() {
-        page.goToAcp1Page();
+        mainPage.goToAcp1Page();
     }
 
     @Test
     public void testFooterInformation() {
-        page.chainsDown();
-        page.footerInformation();
-        page.footerInformationCheck();
+        mainPage.chainsDown();
+        mainPage.footerInformation();
+        mainPage.footerInformationCheck();
     }
 
     @Test
     public void testButton() {
-        page.chainsDown();
-        page.upButton();
-        page.shouldBeHover();
-        page.clickUpButtonMain();
+        mainPage.chainsDown();
+        mainPage.upButton();
+        mainPage.shouldBeHover();
+        mainPage.clickUpButtonMain();
     }
 
     @Test
     public void testVideo() {
-        page.presenceOfTheVideo();
-        page.videoOnRepeat();
+        mainPage.presenceOfTheVideo();
+        mainPage.videoOnRepeat();
     }
 
 }

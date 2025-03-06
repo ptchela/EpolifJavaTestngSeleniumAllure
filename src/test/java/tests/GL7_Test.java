@@ -9,15 +9,6 @@ import pages.MainPage;
 
 public class GL7_Test extends BaseTest {
 
-    private MainPage mainPage;
-    private GL7_Page gl7Page;
-
-    @BeforeMethod
-    public void setUpTest() {
-        mainPage = new MainPage(driver, link);
-        gl7Page = new GL7_Page(driver, link);
-    }
-
     @Test
     public void testClickOnLogoGL7() {
         mainPage.goToGl7Page();
