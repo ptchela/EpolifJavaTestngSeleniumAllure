@@ -1,10 +1,6 @@
 package tests;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.ACP1_Page;
-import pages.AquaPage;
-import pages.MainPage;
 
 public class AquaTest extends BaseTest {
 
