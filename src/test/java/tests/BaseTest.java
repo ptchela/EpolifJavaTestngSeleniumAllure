@@ -6,10 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pages.MainPage;
 
 public class BaseTest {
-    WebDriver driver;
-    final String link = "https://epolif.ru/";
+    protected WebDriver driver;
+    protected final String link = "https://epolif.ru/";
 
     @BeforeClass
     public void setUp() {
