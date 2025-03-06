@@ -11,27 +11,8 @@ import org.testng.annotations.Test;
 import pages.ACP1_Page;
 import pages.MainPage;
 
-public class ACP1_Test {
+public class ACP1_Test extends BaseTest {
 
-    private WebDriver driver;
-    private final String link = "https://epolif.ru/";
-
-    @BeforeClass
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(link);
-        driver.findElement(By.xpath("//*[@id='details-button']")).click();
-        driver.findElement(By.xpath("//*[@id='proceed-link']")).click();
-    }
-
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
 
     @Test
     public void testClickOnLogoACP1() {

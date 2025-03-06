@@ -10,27 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.MainPage;
 
-public class MainPageTests {
-
-    private WebDriver driver;
-    private final String link = "https://epolif.ru/";
-
-    @BeforeClass
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(link);
-        driver.findElement(By.xpath("//*[@id='details-button']")).click();
-        driver.findElement(By.xpath("//*[@id='proceed-link']")).click();
-    }
-
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+public class MainPageTests extends BaseTest {
 
     @Test
     public void testClickOnLogoMain() {
