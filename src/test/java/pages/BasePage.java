@@ -9,10 +9,6 @@ import org.testng.Assert;
 
 public class BasePage {
 
-    static {
-        WebDriverManager.chromedriver().setup();
-    }
-
     protected WebDriver driver;
     protected String link;
 
@@ -26,6 +22,7 @@ public class BasePage {
     private static final By FOOTER_ABOUT = By.id("page-footer");
     private static final By UP_BUTTON = By.xpath("//a[@title='Наверх']");
     private static final By LOGO = By.xpath("//a[@aria-label='Ссылка']");
+    protected static final By UP_BUTTON2 = By.xpath("//a[@class='w-toplink pos_right active']");
 
     public BasePage(WebDriver driver, String link) {
         this.driver = driver;
