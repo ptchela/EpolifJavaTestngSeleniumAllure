@@ -20,15 +20,6 @@ public class BaseTest {
     protected GL7_Page gl7Page;
     protected GL21_Page gl21Page;
 
-    @BeforeMethod
-    public void setUpTest() {
-        mainPage = new MainPage(driver, LINK);
-        acp1Page = new ACP1_Page(driver, LINK);
-        aquaPage = new AquaPage(driver, LINK);
-        gl7Page = new GL7_Page(driver, LINK);
-        gl21Page = new GL21_Page(driver, LINK);
-    }
-
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();
@@ -37,6 +28,15 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get(LINK);
+    }
+
+    @BeforeClass
+    public void setUpTest() {
+        mainPage = new MainPage(driver, LINK);
+        acp1Page = new ACP1_Page(driver, LINK);
+        aquaPage = new AquaPage(driver, LINK);
+        gl7Page = new GL7_Page(driver, LINK);
+        gl21Page = new GL21_Page(driver, LINK);
     }
 
     @AfterClass
