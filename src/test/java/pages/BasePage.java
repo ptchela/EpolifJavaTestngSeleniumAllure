@@ -1,3 +1,5 @@
+package pages;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,8 +24,8 @@ public class BasePage {
     private static final By LINK_GL21 = By.xpath("//span[text()='Epolif GL 21']");
     private static final By LINK_ACP1 = By.xpath("//span[text()='Epolif ACP 1']");
     private static final By FOOTER_ABOUT = By.id("page-footer");
-    private static final By UP_BUTTON = By.xpath("//a[title='Наверх']");
-    private static final By LOGO = By.xpath("//a[aria-label='Cсылка']");
+    private static final By UP_BUTTON = By.xpath("//a[@title='Наверх']");
+    private static final By LOGO = By.xpath("//a[@aria-label='Ссылка']");
 
     public BasePage(WebDriver driver, String link) {
         this.driver = driver;
@@ -68,6 +70,10 @@ public class BasePage {
     public void goToAcp1Page() {
         driver.findElement(LINK_ACP1).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("epolif-acp-1/"), "Wrong page");
+    }
+
+    public void footerInformation() {
+        Assert.assertTrue(isElementPresent(FOOTER_ABOUT), "Element is absent");
     }
 
     public void footerInformationCheck() {
