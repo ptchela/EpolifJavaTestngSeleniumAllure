@@ -15,6 +15,7 @@ public class ChromeDriverConfig {
         options.addArguments("--disable-popup-blocking"); // Отключает блокировку всплывающих окон
         options.addArguments("--disable-infobars"); // Отключает инфопанель Chrome
         options.addArguments("--incognito"); // Запускает браузер в режиме инкогнито
+        options.addArguments("--window-size=1920,1080");
         options.setAcceptInsecureCerts(true);
         return options;
     }

@@ -26,7 +26,6 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = ChromeDriverConfig.getChromeOptions();
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
         driver.get(LINK);
     }
 
