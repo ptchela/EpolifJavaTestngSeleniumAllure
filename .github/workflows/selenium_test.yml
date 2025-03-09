@@ -37,6 +37,13 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
+      - name: Upload Surefire Reports (for debugging)
+        if: failure()  # Загружаем отчеты только в случае ошибки
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports
+
       - name: Generate Allure Report
         run: mvn allure:report
 
