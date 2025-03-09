@@ -37,15 +37,37 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
-      - name: Upload Surefire Reports (for debugging)
-        if: failure()  # Загружаем отчеты только в случае ошибки
+      - name: Upload Surefire Reports
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
           path: target/surefire-reports
 
+      - name: Load Allure test report history
+        uses: actions/checkout@v4
+        if: success() || failure()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Prepare Allure history
+        run: |
+          mkdir -p target/allure-history
+          if [ -d gh-pages/allure-history ]; then
+            cp -r gh-pages/allure-history target/allure-history
+          fi
+
       - name: Generate Allure Report
         run: mvn allure:report
+
+      - name: Save Allure history
+        run: |
+          mkdir -p target/site/allure-maven-plugin/allure-history
+          if [ -d target/allure-history ]; then
+            cp -r target/allure-history/* target/site/allure-maven-plugin/allure-history
+          fi
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
@@ -57,4 +79,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.EPOLIF_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: target/site/allure-maven-plugin
