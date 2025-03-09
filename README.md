@@ -22,7 +22,7 @@ Test object👉
 [![Epolif](https://user-images.githubusercontent.com/104420244/215063855-70b40acd-970f-4032-9725-a86ef43ca9b7.png)](https://epolif.ru/)
 
 MY👉
-[<img src="https://logosmarken.com/wp-content/uploads/2021/03/Trello-Logo-650x366.png" alt='Trello' width="115" height="70">](https://trello.com/w/new48343486)
+[<img src="https://logosmarken.com/wp-content/uploads/2021/03/Trello-Logo-650x366.png" alt='Trello' width="115" height="70">](https://trello.com/invite/b/67cde3d08e807da44d0b36fc/ATTIc7f367d25f452389bc8bdd7d9ffb0f37570FA3A2/epolif-test-project)
 
 #### [**_This website is still under construction, I add new tests as new features arise._**](https://epolif.ru/)
 
