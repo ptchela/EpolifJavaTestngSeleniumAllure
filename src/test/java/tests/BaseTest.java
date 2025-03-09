@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import pages.*;
 
 public class BaseTest {
+
     protected WebDriver driver;
     protected static final String LINK = "https://epolif.ru/";
 
@@ -20,6 +21,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
@@ -30,6 +32,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUpTest() {
+
         mainPage = new MainPage(driver, LINK);
         acp1Page = new ACP1_Page(driver, LINK);
         aquaPage = new AquaPage(driver, LINK);
