@@ -2,6 +2,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.idea/
+*.iml
+*.class
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -37,3 +40,6 @@ build/
 ### Mac OS ###
 .DS_Store
 /.allure/
+
+# Исключаем файлы Allure, которые не нужны в репозитории
+allure-results/
