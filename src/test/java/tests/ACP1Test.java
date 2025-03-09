@@ -63,6 +63,7 @@ public class ACP1Test extends BaseTest {
         acp1Page.chainsDown();
         acp1Page.footerInformation();
         acp1Page.footerInformationCheck();
+
     }
 
     @Test
