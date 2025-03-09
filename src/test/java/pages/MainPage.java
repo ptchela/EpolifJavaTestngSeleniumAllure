@@ -6,7 +6,6 @@ import org.testng.Assert;
 
 public class MainPage extends BasePage {
 
-
     public MainPage(WebDriver driver, String link) {
         super(driver, link);
     }
