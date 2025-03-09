@@ -46,28 +46,27 @@ jobs:
           path: target/surefire-reports
 
       - name: Get Allure history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
 
+      - name: Generate Allure Report
+        run: mvn allure:report
 
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          allure_results: allure-results
+          allure_results: target/allure-results
           allure_history: allure-history
-
-      - name: Generate Allure Report
-        run: mvn allure:report
 
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
-            PERSONAL_TOKEN: ${{ secrets.EPOLIF_TOKEN  }}
-            PUBLISH_BRANCH: gh-pages
-            PUBLISH_DIR: allure-history
+          PERSONAL_TOKEN: ${{ secrets.EPOLIF_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
