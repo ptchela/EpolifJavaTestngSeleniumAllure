@@ -1,5 +1,6 @@
 package tests;
 
+import config.ChromeDriverConfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,8 +24,7 @@ public class BaseTest {
     public void setUp() {
 
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.setAcceptInsecureCerts(true);
+        ChromeOptions options = ChromeDriverConfig.getChromeOptions();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get(LINK);
