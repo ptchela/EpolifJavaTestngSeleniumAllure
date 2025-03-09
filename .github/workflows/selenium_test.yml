@@ -37,7 +37,7 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
-      - name: Upload Surefire Reports (for debugging)
+      - name: Upload Surefire Reports
         if: failure()
         uses: actions/upload-artifact@v4
         with:
@@ -65,7 +65,9 @@ jobs:
       - name: Save Allure history
         run: |
           mkdir -p target/site/allure-maven-plugin/allure-history
-          cp -r target/allure-history/* target/site/allure-maven-plugin/allure-history
+          if [ -d target/allure-history ]; then
+            cp -r target/allure-history/* target/site/allure-maven-plugin/allure-history
+          fi
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
