@@ -13,7 +13,7 @@
 
 <p>
 This project is a test automation suite for the Epolif online information site, utilizing <strong>Java</strong>, <strong>Selenium WebDriver</strong>,
-<strong>TestNG</strong>, and <strong>Allure</strong> нетTest Reporter for reporting. 
+<strong>TestNG</strong>, and <strong>Allure</strong> Test Reporter for reporting. 
 
 </p>
 My personal  test automation project to trigger automated tests, generate Allure Report and publish to GitHub Pages via GitHub Actions workflow. All user stories and test cases are displayed on Trello board. 
