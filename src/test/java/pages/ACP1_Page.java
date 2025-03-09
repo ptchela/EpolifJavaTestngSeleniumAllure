@@ -5,7 +5,6 @@ import org.testng.Assert;
 
 public class ACP1_Page extends BasePage {
 
-
     public ACP1_Page(WebDriver driver, String link) {
         super(driver, link);
     }
