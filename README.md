@@ -1,3 +1,6 @@
+[![Java CI with Maven](https://github.com/ptchela/EpolifJavaTestngSeleniumAllure/actions/workflows/selenium_test.yml/badge.svg)](https://github.com/ptchela/EpolifJavaTestngSeleniumAllure/actions/workflows/selenium_test.yml)
+
+
 #### Project description
 
 My personal  test automation project to trigger automated tests, generate Allure Report and publish to GitHub Pages via GitHub Actions workflow. All user stories and test cases are displayed on Trello board. 
