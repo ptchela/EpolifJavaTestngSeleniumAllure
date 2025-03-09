@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1>OpenCart Java Selenium TestNG Allure</h1>
+  <h1>Epolif Java Selenium TestNG Allure</h1>
 
 <p>
 This project is a test automation suite for the Epolif online information site, utilizing <strong>Java</strong>, <strong>Selenium WebDriver</strong>,
