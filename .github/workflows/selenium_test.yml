@@ -32,7 +32,7 @@ jobs:
           restore-keys: ${{ runner.os }}-maven-
 
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@v2
+        uses: browser-actions/setup-chrome@latest
 
       - name: Run Maven tests
         run: mvn clean test
