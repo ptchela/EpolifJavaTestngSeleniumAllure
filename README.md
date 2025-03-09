@@ -1,8 +1,21 @@
 [![Java CI with Maven](https://github.com/ptchela/EpolifJavaTestngSeleniumAllure/actions/workflows/selenium_test.yml/badge.svg)](https://github.com/ptchela/EpolifJavaTestngSeleniumAllure/actions/workflows/selenium_test.yml)
-
-
 #### Project description
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1>OpenCart Java Selenium TestNG Allure</h1>
+
+<p>
+This project is a test automation suite for the Epolif online information site, utilizing <strong>Java</strong>, <strong>Selenium WebDriver</strong>,
+<strong>TestNG</strong>, and <strong>Allure</strong> нетTest Reporter for reporting. 
+
+</p>
 My personal  test automation project to trigger automated tests, generate Allure Report and publish to GitHub Pages via GitHub Actions workflow. All user stories and test cases are displayed on Trello board. 
 
 Test object👉
